@@ -16,9 +16,4 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/posts', (req, res) => {
-    res.status(200).json({
-        data: db,
-        counter: db.length
-    })
-})
+app.get('/posts',)
