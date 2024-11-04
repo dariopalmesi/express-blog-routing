@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const postRouter = require('./routes/posts.js')
+app.use(express.static('public'))
 
 
 const PORT = process.env.PORT
