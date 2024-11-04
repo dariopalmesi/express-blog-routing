@@ -1,6 +1,7 @@
 const express = require('express')
+const posts = require('./db/db')
 const app = express()
-const db = require('./db/db.js')
+const postsController = require('./controller/postsController.js')
 
 
 const PORT = process.env.PORT
@@ -16,4 +17,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/posts',)
+ app.get('/posts', postsController.index)
+
+ app.get('posts/:slug', postsController.show)
