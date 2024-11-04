@@ -3,8 +3,8 @@ const router = express.Router()
 const postsController = require('../controller/postsController.js')
 
 
-app.get('/', postsController.index)
+router.get('/', postsController.index)
 
- app.get('/:slug', postsController.show)
+ router.get('/:slug', postsController.show)
 
 module.exports = router
